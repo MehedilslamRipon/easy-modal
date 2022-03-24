@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Modal is an easy way</title>
+
+      <!-- styles -->
+      <style>
+         body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+         .modal-wrapper {
+            padding: 50px;
+         }
+         button {
+            background: rgb(32, 32, 61);
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            padding: 8px 20px;
+         }
+         .modal {
+            padding: 1em;
+            max-width: 50ch;
+            border-radius: 8px;
+         }
+         .modal::backdrop {
+            background: purple;
+            opacity: 0.2;
+         }
+      </style>
+   </head>
+
+   <body>
+      <div class="modal-wrapper">
+         <h1>Modal is an easy way</h1>
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            veniam sint quia ipsum temporibus amet est laborum error nisi,
+            facere modi voluptas nemo. Ad distinctio cum asperiores sit nisi
+            ratione!
+         </p>
+         <br />
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            veniam sint quia ipsum temporibus amet est laborum error nisi,
+            facere modi voluptas nemo. Ad distinctio cum asperiores sit nisi
+            ratione!
+         </p>
+         <br />
+
+         <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+            veniam sint quia ipsum temporibus amet est laborum error nisi,
+            facere modi voluptas nemo. Ad distinctio cum asperiores sit nisi
+            ratione!
+         </p>
+         <br />
+         <button class="open-button">Open modal</button>
+
+         <dialog class="modal" id="modal">
+            <h2>Lorem ipsum dolor sit amet.</h2>
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+               harum qui, error voluptatibus magni placeat.
+            </p>
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+               harum qui, error voluptatibus magni placeat.
+            </p>
+            <button class="close-button">Close modal</button>
+         </dialog>
+      </div>
+
+      <script>
+         const modal = document.querySelector('.modal');
+         const openModal = document.querySelector('.open-button');
+         const closeModal = document.querySelector('.close-button');
+
+         openModal.addEventListener('click', () => {
+            modal.showModal();
+         });
+
+         closeModal.addEventListener('click', () => {
+            modal.close();
+         });
+      </script>
+   </body>
+</html>
